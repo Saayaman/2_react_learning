@@ -26,9 +26,11 @@ button, a {
   &:focus { 
     outline: none;
     cursor: pointer;
-
   }
+}
 
-
+a {
+  text-decoration: none;
+  color: black;
 }
 
