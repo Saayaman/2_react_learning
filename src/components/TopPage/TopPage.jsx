@@ -12,9 +12,11 @@ export default class TopPage extends Component {
       <Container>
         <div className="TopPage">
           {portfolioItems.map((portfolioItem, index) => (
-            <NavLink to={`/works/${index}`}>
+            <NavLink
+              to={`/works/${index}`}
+              key={portfolioItem.title}
+            >
               <PortfolioItem
-                key={portfolioItem.title}
                 imageUrl={portfolioItem.imageUrl}
                 title={portfolioItem.title}
                 categories={portfolioItem.categories}
