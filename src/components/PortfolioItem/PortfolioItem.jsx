@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import PortfolioItemButton from '../PortfolioItemButton/PortfolioItemButton.jsx';
 import cx from 'classnames';
 import './PortfolioItem.scss';
 
@@ -30,7 +31,7 @@ export default class PortfolioItem extends Component {
           <img src={imageUrl} alt="Global Clock" />
           {
             isHovered && (
-              <button className="PortfolioItem-button">See Project</button>
+              <PortfolioItemButton text={"See Project"} />
             )
           }
         </div>
