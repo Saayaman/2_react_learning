@@ -6,8 +6,14 @@ import './Header.scss';
 
 export default class Header extends Component {
 
+  state = {
+    showDropdown: false,
+  }
+
   handleClick = () => {
-    console.log("Clicked!!");
+    this.setState((prevState) => ({
+      showDropdown: !prevState.showDropdown,
+    }));
   }
     
   render() {
@@ -31,9 +37,11 @@ export default class Header extends Component {
                       src={require("./../../assets/icons/menuIcon.svg")}
                     />
                   </button>
-                  <div className="Header-dropdown-menu">
-                    <Nav smallSize={true} />
-                  </div>
+                  {this.state.showDropdown && 
+                    <div className="Header-dropdown-menu">
+                      <Nav smallSize={true} />
+                    </div>
+                  }
                 </div>
               )
             )}
