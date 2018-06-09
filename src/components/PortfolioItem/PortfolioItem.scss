@@ -53,6 +53,11 @@
    }
 }
 
+.PortfolioItem-title--active {
+  color: $colorRed;
+  transition: 0.4s color;
+}
+
 .PortfolioItem-category {
   &:after {
     content: ", ";
