@@ -21,6 +21,7 @@ export default class Example extends Component {
       <div>
         <h1>{title}</h1>
         <p>{number}</p>
+        <button onClick={this.handleClick}>Press this button</button>
       </div>
     )
   }
