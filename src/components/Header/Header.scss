@@ -20,8 +20,10 @@
 
 .Header-nav {
   display: inline-flex;
-  li {
-    margin-right: 1.6rem;
-  }
-  
+}
+
+.Header-nav-item {
+  margin-left: 1.6rem;
+  text-decoration: none;
+  color: black;
 }
