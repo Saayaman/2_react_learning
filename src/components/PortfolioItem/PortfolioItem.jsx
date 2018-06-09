@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import cx from 'classnames';
 import './PortfolioItem.scss';
 
@@ -48,3 +49,15 @@ export default class PortfolioItem extends Component {
     )
   }
 }
+
+PortfolioItem.propTypes = {
+  imageUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  categories: PropTypes.array,
+};
+
+PortfolioItem.defaultProps = {
+  categories: [],
+};
+
+
