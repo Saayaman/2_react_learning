@@ -1,3 +1,5 @@
+@import '../../styles/config.variables';
+
 .Header {
   background-color:white;
   position: fixed;
@@ -26,4 +28,9 @@
   margin-left: 1.6rem;
   text-decoration: none;
   color: black;
+
+  &--active {
+    color: $colorRed;
+    border-bottom: 2px solid $colorRed;
+  }
 }
