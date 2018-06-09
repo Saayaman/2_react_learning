@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer.jsx';
 import TopPage from './components/TopPage/TopPage.jsx';
 import AboutPage from './components/AboutPage/AboutPage.jsx';
 import ContactPage from './components/ContactPage/ContactPage.jsx';
+import WorksPage from './components/WorksPage/WorksPage.jsx';
+
 import './App.scss';
 
 class App extends Component {
@@ -14,6 +16,7 @@ class App extends Component {
         <Header />
         <Switch>
           <Route exact path="/" component={TopPage} />
+          <Route path="/works/:id" component={WorksPage} />
           <Route path="/about" component={AboutPage} />
           <Route path="/contact" component={ContactPage} />
         </Switch>

@@ -22,7 +22,7 @@ export default class PortfolioItem extends Component {
   }
   render() {
     const { isHovered  } = this.state;
-    const { imageUrl, title, categories } = this.props;
+    const { imageUrl, title, categories, id } = this.props;
 
     return (
       <div className="PorfolioItem" onMouseOver={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
