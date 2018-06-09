@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import Media from 'react-media';
+import cx from 'classnames';
 import { NavLink } from 'react-router-dom';
 import './Header.scss';
 
@@ -19,7 +20,7 @@ export default class Header extends Component {
             {(matches) => (
               matches ? (
                 <div className="Header-nav">
-                 <Nav />
+                 <Nav smallSize={false} />
                 </div>
               ) : (
                 <div className="Header-dropdown">
@@ -31,7 +32,7 @@ export default class Header extends Component {
                     />
                   </button>
                   <div className="Header-dropdown-menu">
-                    <Nav />
+                    <Nav smallSize={true} />
                   </div>
                 </div>
               )
@@ -44,27 +45,27 @@ export default class Header extends Component {
 }
 
 
-function Nav() {
+function Nav({ smallSize }) {
   return(
     <Fragment>
       <NavLink
         exact
         to="/"
-        className="Header-nav-item"
+        className={cx("Header-nav-item", { 'Header-nav-item--dropdown' : smallSize })}
         activeClassName="Header-nav-item--active"
       >
         My Works
       </NavLink>
       <NavLink
         to="/about"
-        className="Header-nav-item"
+        className={cx("Header-nav-item", { 'Header-nav-item--dropdown' : smallSize })}
         activeClassName="Header-nav-item--active"
       >
         About Me
       </NavLink>
       <NavLink
         to="/contact"
-        className="Header-nav-item"
+        className={cx("Header-nav-item", { 'Header-nav-item--dropdown' : smallSize })}
         activeClassName="Header-nav-item--active"
       >
         Contact

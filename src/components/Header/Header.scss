@@ -20,6 +20,25 @@
   font-size: 3rem;
 }
 
+.Header-dropdown {
+  position: relative;
+}
+
+.Header-dropdown-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 20rem;
+  top: 4rem;
+  right: 0;
+  text-align: left;
+  margin: 100;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);}
+
 .Header-nav {
   display: inline-flex;
 }
@@ -32,5 +51,10 @@
   &--active {
     color: $colorRed;
     border-bottom: 2px solid $colorRed;
+  }
+
+  &--dropdown {
+    margin: 1.6rem;
+    border-bottom: unset;
   }
 }
