@@ -34,7 +34,7 @@ export default class PortfolioItem extends Component {
           }
         </div>
         <div className="PortfolioItem-details">
-          <h3 className={cx({ "PortfolioItem-title--active" : isHovered })}>{title}</h3>
+          <h3 className={cx("PortfolioItem-title", { "PortfolioItem-title--active" : isHovered })}>{title}</h3>
           <span>
             {categories.map((category) => (
               <span key={category} className="PortfolioItem-category"
